@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 .main-route {
-    @apply text-lg hover:text-purple-700 hover:border-b-2 hover:border-b-purple-700;
+    @apply text-lg hover:text-purple-700 hover:border-b-2 hover:border-b-purple-700
+    tracking-wide;
 }
 
 .active-route {
