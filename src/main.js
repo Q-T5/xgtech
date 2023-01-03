@@ -10,6 +10,7 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import '@mdi/font/css/materialdesignicons.css'
 
 // importing for the router
 import router from './utils/router'
@@ -20,7 +21,10 @@ const pinia = createPinia();
 // setup vuetify
 const vuetify = createVuetify({
     components,
-    directives
+    directives,
+    icons: {
+        defaultSet: 'mdi'
+    }
 });
 
 createApp(App)
