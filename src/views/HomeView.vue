@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col justify-center pl-2 space-y-2">
-        <h1 class="text-4xl">Welcome To XGAMERtechnologies</h1>
-        <h2 class="text-3xl">
+    <div class="flex flex-col justify-center pl-2 space-y-2 ">
+        <h1 class="text-4xl font-ubuntu">Welcome To XGAMERtechnologies</h1>
+        <h2 class="text-3xl font-ubuntu">
             Your Home For: <span id="expose"></span>
         </h2>
         <p class="text-xl w-[55%] max-w-[55%] font-nunito">
