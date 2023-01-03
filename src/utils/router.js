@@ -21,12 +21,37 @@ const router = createRouter({
         {
             path: "/products",
             component: ProductsView,
-            name: "ProductsView"
+            name: "ProductsView",
+            children: [
+                {
+                    path: "/products/software",
+                    component: () => import("/src/views/subviews/SoftwareView.vue"),
+                    name: "SofwareView"
+                },
+                {
+                    path: "/products/hardware",
+                    component: () => import("/src/views/subviews/HardwareView.vue"),
+                    name: "HardwareView"
+                }
+
+                // there will be a search functionality but it is not routed
+            ]
         },
         {
             path: "/services",
             component: ServicesView,
-            name: "ServicesView"
+            name: "ServicesView",
+            children: [
+                {
+                    path: "/services/repairs",
+                    component: () => import("/src/views/subviews/RepairsView.vue"),
+                    name: "RepairsView"
+                },
+                {
+                    path: "/services/trade-ins",
+                    component: () => import("/src/views/subviews/TradeInsView.vue")
+                }
+            ]
         },
         {
             path: "/contact",
