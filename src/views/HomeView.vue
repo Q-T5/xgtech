@@ -4,8 +4,15 @@
         <h2 class="text-3xl font-ubuntu">
             Your Home For: <span id="expose"></span>
         </h2>
-        <p class="text-xl w-[55%] max-w-[55%] font-nunito">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis expedita porro eaque at quas laboriosam ipsum, explicabo harum distinctio molestiae omnis in non laudantium ex, aspernatur, sit ullam tempora id?
+        <p class="text-xl w-[55%] max-w-[55%] font-nunito mt-5 mb-2">
+            We have thousands of games for PC, PS2, PSP, PS3 and PS4. We also assemble high end rendering & 
+            gaming computers, custom-suited for gamers, animators and graphic designers.  
+            <router-link 
+                :to="{ name: 'ContactUsView' }"
+                class="underline">
+                Visit our shop
+            </router-link>today or click on any of the links below to shop for hardware,
+            software and games, or to contact us.
         </p>
         <div class="w-[50%] max-w-[50%] space-x-2">
             <v-btn 
@@ -28,8 +35,8 @@ export default {
     name: "HomeView",
     setup: function() {
         const homeButtons = ref([
-            { text: "Games", routeName: "GamesView", icon: "mdi-gamepad-circle-left" },
-            { text: "Products", routeName: "ProductsView", icon: "mdi-shopping" },
+            { text: "Browse Games", routeName: "GamesView", icon: "mdi-gamepad-circle-left" },
+            { text: "Shop Products", routeName: "ProductsView", icon: "mdi-shopping" },
             { text: "Contact Us", routeName: "ContactUsView", icon: "mdi-phone" },
         ]);
 
