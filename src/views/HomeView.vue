@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center pl-2 space-y-2 ">
+    <div class="flex flex-col justify-center pl-2 space-y-2 h-screen">
         <h1 class="text-4xl font-ubuntu">Welcome To XGAMERtechnologies</h1>
         <h2 class="text-3xl font-ubuntu">
             Your Home For: <span id="expose"></span>
@@ -20,7 +20,8 @@
                 rounded="pill"
                 color="purple"
                 @click="$router.push({ name: button.routeName })"
-                :append-icon="button.icon">
+                :append-icon="button.icon"
+                variant="flat">
                 {{ button.text }}
             </v-btn>
         </div>
