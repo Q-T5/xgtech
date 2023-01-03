@@ -5,13 +5,15 @@
         <img src="/src/assets/xgamer-logo.svg" alt="xgamer-logo" class="w-8" />
         <h1 class="text-lg font-ubuntu">XGAMERtechnologies</h1>
       </div>
-      <div class="flex items-center h-full space-x-4">
-        <router-link 
+      <div class="flex items-center h-full">
+        <v-btn 
           v-for="(route, index) in mainRoutes" :key="index" :value="index"
-          class="main-route" :to="{ name: route.name }"
-          :class="$route.name === route.name ? 'active-route' : ''">
+          rounded="pill"
+          :color="$route.name === route.name ? 'purple' : ''"
+          @click="$router.push({ name: route.name })"
+          :variant="$route.name === route.name ? 'flat' : 'text'">
           {{ route.text }}
-        </router-link>
+      </v-btn>
       </div>
     </nav>
     <router-view class="h-screen"></router-view>
