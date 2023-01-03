@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.comment-box {
+    @apply rounded-full border-[1px] border-slate-500 w-[85%] h-10 p-2 font-nunito
+    outline-none shadow-md border-solid;
+}
