@@ -1,10 +1,17 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+
+// importing for pinia
 import { createPinia } from 'pinia'
+
+// importing for vuetify
+import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+
+// importing for the router
 import router from './utils/router'
 
 // setup pinia
