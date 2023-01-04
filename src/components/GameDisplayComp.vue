@@ -1,13 +1,13 @@
 <template>
     <div class="w-48 max-w-fit h-fit flex flex-col items-center mb-5">
         <div class="w-full max-w-full flex flex-wrap">
-            <h1 class="font-nunito">The Witcher</h1>
+            <h1 class="font-nunito">{{ singleGameData.title }}</h1>
         </div>
         <div class="relative" @mouseenter="displayOverlay = false" @mouseleave="displayOverlay = true">
             <img 
-            src="/src/assets/media/witcher.jpg" 
+            :src=singleGameData.posterLink 
             alt="game-poster"
-            class="w-48 rounded-md" />
+            class="w-48 rounded-md h-64 max-h-64" />
             <div class="absolute bottom-1 right-[3px] z-10">
                 <v-btn icon color="purple" @click="addToCartEvent">
                     <v-icon>mdi-cart</v-icon>
@@ -22,20 +22,29 @@
             </div>
         </div>
         <div class="flex flex-col w-full font-nunito text-sm">
-            <p>Release: 2021-05-31</p>
-            <p>Size: 20GiB</p>
-            <p>Cost(Ksh): 7800.00</p>
+            <p>Release: {{ singleGameData.releaseDate }}</p>
+            <p>Size: {{ singleGameData.gameSize }}</p>
+            <p>Cost(Ksh): {{ singleGameData.price }}</p>
         </div>
     </div>
 </template>
 
 <script lang="js">
 import { ref } from 'vue'
+import useGameData from '/src/composables/GameData.js'
 
 export default {
     name: "GameDisplayComp",
+    props: {
+        singleGameData: {
+            type: Object,
+            default: {}
+        }
+    },
     setup: function(props, context) {
         const displayOverlay = ref(true);
+        // store composable as object
+        const gameData = useGameData();
 
         // events
         function addToCartEvent() {
@@ -47,8 +56,8 @@ export default {
         }
 
         return {
-            displayOverlay, addToCartEvent, showExpandedView
+            displayOverlay, addToCartEvent, showExpandedView, gameData
         }
-    }
+    },
 }
 </script>
