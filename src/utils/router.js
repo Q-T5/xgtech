@@ -49,8 +49,9 @@ const router = createRouter({
                 },
                 {
                     path: "/services/trade-ins",
-                    component: () => import("/src/views/subviews/TradeInsView.vue")
-                }
+                    component: () => import("/src/views/subviews/TradeInsView.vue"),
+                    name: "TradeInsView"
+                },
             ]
         },
         {
