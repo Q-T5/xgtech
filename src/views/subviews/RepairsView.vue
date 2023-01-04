@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-center items-center py-2 space-x-2">
-        <h1 class="text-xl font-ubuntu">I Want Service for My: </h1>
+        <h1 class="text-xl font-ubuntu">I Want Services for My: </h1>
         <v-btn-toggle
             rounded="xl">
             <v-btn 
@@ -36,7 +36,7 @@ export default {
             { text: "PS2", component: "ps2-services-comp" },
             { text: "PS3", component: "ps3-services-comp" },
             { text: "PS4", component: "ps4-services-comp" },
-        ])
+        ]);  
 
         return {
             currentComponent, components
