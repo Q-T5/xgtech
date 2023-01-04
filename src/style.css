@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 .comment-box {
-    @apply rounded-full border-[1px] border-slate-500 w-[85%] h-10 p-2 font-nunito
+    @apply rounded-full border-[1px] border-slate-300 w-[85%] h-10 p-2 font-nunito
+    outline-none shadow-md border-solid;
+}
+
+.game-search-box {
+    @apply rounded-full border-[1px] border-slate-300 w-96 h-[33px] p-2 font-nunito
     outline-none shadow-md border-solid;
 }
