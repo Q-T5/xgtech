@@ -1,11 +1,11 @@
 <template>
-    <div class="w-48 max-w-fit h-fit flex flex-col items-center">
+    <div class="w-48 max-w-fit h-fit flex flex-col items-center mb-5">
         <div class="w-full max-w-full flex flex-wrap">
             <h1 class="font-nunito">The Witcher</h1>
         </div>
         <div class="relative" @mouseenter="displayOverlay = false" @mouseleave="displayOverlay = true">
             <img 
-            src="/src/assets/witcher.jpg" 
+            src="/src/assets/media/witcher.jpg" 
             alt="game-poster"
             class="w-48 rounded-md" />
             <div class="absolute bottom-1 right-[3px] z-10">
