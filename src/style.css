@@ -11,3 +11,7 @@
     @apply rounded-full border-[1px] border-slate-300 w-96 h-[33px] p-2 font-nunito
     outline-none shadow-md border-solid;
 }
+
+.active-service {
+    @apply text-purple-600 border-b-purple-600 border-b-[3px];
+}
