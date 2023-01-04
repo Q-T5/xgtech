@@ -25,7 +25,8 @@
                 </v-btn>
             </div>
         </div>
-        <div class="h-[93%] max-h-[95%] overflow-scroll grid grid-cols-6 px-2">
+        <div 
+            class="h-[93%] max-h-[95%] overflow-scroll grid grid-cols-6 px-2 justify-items-center">
             <game-display-comp @showExpandedView="showExpandedView = true" />
             <game-display-comp @showExpandedView="showExpandedView = true" />
             <game-display-comp @showExpandedView="showExpandedView = true" />
@@ -60,6 +61,7 @@
 import { ref } from 'vue'
 import GameDisplayComp from '../components/GameDisplayComp.vue'
 import GameExpandedComp from '../components/GameExpandedComp.vue'
+import useGameData from '/src/composables/GameData.js'
 
 export default {
     name: "GamesView",
@@ -69,12 +71,17 @@ export default {
     setup: function() {
         // reactive data
         const showExpandedView = ref(false);
+        // store composable as object
+        const gameData = useGameData();
         
         // functions
 
         return {
-            showExpandedView
+            showExpandedView, gameData
         }
+    },
+    mounted: function() {
+        console.log(`Game Data: ${ JSON.stringify(this.gameData.gameData.value) }`);
     }
 }
 </script>
