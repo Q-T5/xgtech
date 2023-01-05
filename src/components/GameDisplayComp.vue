@@ -10,7 +10,7 @@
             class="w-[11.5rem] rounded-md h-64 max-h-64" />
             <div class="absolute bottom-1 right-[3px] z-10">
                 <v-btn icon color="purple" @click="addToCartEvent">
-                    <v-icon>mdi-cart</v-icon>
+                    <v-icon>mdi-cart-arrow-down</v-icon>
                 </v-btn>
             </div>
             <div 
