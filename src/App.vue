@@ -18,7 +18,7 @@
     </nav>
     <router-view v-slot="{ Component }">
       <keep-alive>
-        <component :is="Component" />
+        <component :is="Component" @addedToCart="cartItems++" />
       </keep-alive>
     </router-view>
     <div class="absolute bottom-2 right-5">
@@ -34,7 +34,7 @@
       <div class="absolute -top-3 -left-2">
         <v-badge
           color="gray"
-          content="6"
+          :content="cartItems"
           class="font-nunito"
           inline></v-badge>
       </div>
@@ -57,6 +57,7 @@ export default {
       { name: "ServicesView", text: "Services" },
       { name: "ContactUsView", text: "Contact Us" },
     ]);
+    const cartItems = ref(0);
 
     // functions
     function displayCart() {
@@ -64,7 +65,7 @@ export default {
     }
 
     return {
-      mainRoutes, displayCart
+      mainRoutes, displayCart, cartItems
     }
   }
 }
