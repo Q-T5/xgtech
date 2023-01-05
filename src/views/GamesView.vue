@@ -6,7 +6,7 @@
                 <input 
                     type="text" 
                     class="game-search-box"
-                    placeholder="e.g the witcher"
+                    placeholder="e.g search 'the witcher' or 'most' or '2'"
                     maxlength="35"
                     v-model="searchTerm" />
                 <div class="absolute right-0.5 top-1 w-fit h-fit">
@@ -69,7 +69,8 @@ export default {
         // computed properties
         const data = computed(() => {
             return gameData.gameData.value.filter((game) => {
-                return game.title.toLowerCase().startsWith(searchTerm.value);
+                return game.title.toLowerCase().startsWith(searchTerm.value) || 
+                    game.title.toLowerCase().includes(searchTerm.value);
             });
         });
 
