@@ -2,10 +2,12 @@
     <div class="flex justify-center items-center py-2 space-x-2">
         <h1 class="text-xl font-ubuntu">I Want Services for My: </h1>
         <v-btn-toggle
-            rounded="xl">
+            v-model="currentComponent"
+            rounded="xl"
+            mandatory>
             <v-btn 
-                v-for="(comp, index) in components" :key="index" :value="index"
-                @click="currentComponent = comp.component"
+                v-for="(comp, index) in components" :key="index"
+                :value="comp.component"
                 variant="flat"
                 :color="currentComponent === comp.component ? 'purple' :  ''">
                 {{ comp.text }}
