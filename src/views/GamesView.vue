@@ -6,8 +6,9 @@
                 <input 
                     type="text" 
                     class="game-search-box"
-                    placeholder="Search Game"
-                    maxlength="35" />
+                    placeholder="e.g Search The Witcher"
+                    maxlength="35"
+                    v-model="searchTerm" />
                 <div class="absolute right-0.5 top-1 w-fit h-fit">
                     <v-btn 
                         color="purple"
@@ -61,16 +62,19 @@ export default {
     setup: function() {
         // reactive data
         const showExpandedView = ref(false);
+        const searchTerm = ref("");
         // store composable as object
         const gameData = useGameData();
 
         // computed properties
         const data = computed(() => {
-            return gameData.gameData.value;
+            return gameData.gameData.value.filter((game) => {
+                return game.title.toLowerCase().startsWith(searchTerm.value);
+            });
         });
 
         return {
-            showExpandedView, gameData, data
+            showExpandedView, gameData, data, searchTerm
         }
     }
 }
