@@ -8,11 +8,6 @@
             :src=singleGameData.posterLink 
             alt="game-poster"
             class="w-[11.5rem] rounded-md h-64 max-h-64" />
-            <div class="absolute bottom-1 right-[3px] z-10">
-                <v-btn icon color="purple" @click="addToCartEvent">
-                    <v-icon>mdi-cart-arrow-down</v-icon>
-                </v-btn>
-            </div>
             <div 
                 class="absolute rounded-md top-0 w-full h-full bg-slate-50/10 flex justify-center items-center"
                 :hidden="displayOverlay">
@@ -57,13 +52,8 @@ export default {
         const gameData = useGameData();
         const showExpandedView = ref(false);
 
-        // events
-        function addToCartEvent() {
-            context.emit("addToCartEvent");
-        }
-
         return {
-            displayOverlay, addToCartEvent, showExpandedView, gameData
+            displayOverlay, showExpandedView, gameData
         }
     },
 }
