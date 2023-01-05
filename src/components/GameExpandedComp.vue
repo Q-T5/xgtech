@@ -28,9 +28,19 @@
                 </div>
             </div>
             <v-divider vertical></v-divider>
-            <div class="w-[28.8%] p-2 flex flex-col justify-between h-full">
-                <div class="h-[90%]">
+            <div class="w-[28.8%] flex flex-col justify-between h-full">
+                <div class="h-[90%] flex flex-col">
                     <h1 class="text-2xl font-ubuntu">Comments</h1>
+                    <div class="h-full overflow-y-scroll flex flex-col space-y-4">
+                        <div 
+                            class="w-full border-b-[1px] h-12 font-nunito"
+                            v-for="(comment, index) in expandedGameData.comments" :key="index">
+                            <h1>{{ comment.name }}</h1>
+                            <p>
+                                {{ comment.comment }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="h-[10%] flex items-center justify-between">
                     <input 
