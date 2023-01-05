@@ -13,6 +13,14 @@ export default function useGame() {
                 {
                     name: "John Doe",
                     comment: "Test Comment A"
+                },
+                {
+                    name: "Janet Austin",
+                    comment: "Test Comment B"
+                },
+                {
+                    name: "Alex Doe",
+                    comment: "Test Comment c"
                 }
             ]
         },
