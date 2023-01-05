@@ -16,7 +16,7 @@
             <div 
                 class="absolute rounded-md top-0 w-full h-full bg-slate-50/10 flex justify-center items-center"
                 :hidden="displayOverlay">
-                <v-btn icon color="purple" @click="showExpandedView">
+                <v-btn icon color="purple" @click="showExpandedView = true">
                     <v-icon>mdi-arrow-expand</v-icon>
                 </v-btn>
             </div>
@@ -27,14 +27,24 @@
             <p>Cost(Ksh): {{ singleGameData.price }}</p>
         </div>
     </div>
+    <teleport to="#games-expanded">
+        <game-expanded-comp 
+            v-if="showExpandedView === true"
+            @closeExpandedView="showExpandedView = false"
+            :expandedGameData="singleGameData" />
+    </teleport>
 </template>
 
 <script lang="js">
 import { ref } from 'vue'
 import useGameData from '/src/composables/GameData.js'
+import GameExpandedComp from '../components/GameExpandedComp.vue'
 
 export default {
     name: "GameDisplayComp",
+    components: {
+        GameExpandedComp
+    },
     props: {
         singleGameData: {
             type: Object,
@@ -45,14 +55,11 @@ export default {
         const displayOverlay = ref(true);
         // store composable as object
         const gameData = useGameData();
+        const showExpandedView = ref(false);
 
         // events
         function addToCartEvent() {
             context.emit("addToCartEvent");
-        }
-
-        function showExpandedView() {
-            context.emit("showExpandedView");
         }
 
         return {
