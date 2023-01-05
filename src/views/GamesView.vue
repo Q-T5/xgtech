@@ -43,19 +43,37 @@
 </template>
 
 <script lang="js">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import GameDisplayComp from '../components/GameDisplayComp.vue'
 import useGameData from '/src/composables/GameData.js'
+import { useCartStore } from '../utils/cartStore'
 
 export default {
     name: "GamesView",
     components: {
         GameDisplayComp
     },
-    setup: function() {
+    setup: function(props, context) {
         const searchTerm = ref("");
         // store composable as object
         const gameData = useGameData();
+        // use the cart store
+        const cartStore = useCartStore();
+
+        // functions
+        function addToCart(index) {
+            // for the store, it returns an object wrapped with 'reactive'
+            // so there is no need of saying .value after the store name
+            const response = cartStore.addItemToShoppingCart(gameData.gameData.value[index]);
+            if(response === true) {
+                addedToCart();
+            }
+        }
+
+        // event
+        function addedToCart() {
+            context.emit("addedToCart")
+        }
 
         // computed properties
         const data = computed(() => {
@@ -66,7 +84,7 @@ export default {
         });
 
         return {
-            gameData, data, searchTerm
+            gameData, data, searchTerm, cartStore, addToCart, onMounted, addedToCart
         }
     }
 }
