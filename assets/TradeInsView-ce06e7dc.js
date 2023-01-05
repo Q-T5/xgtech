@@ -1,0 +1,1 @@
+import{_ as e,o as n,c as s,a as t}from"./index-ad5a2216.js";const c={name:"TradeInsView",setup:function(){}},o=t("h1",null,"Tradeins view",-1),a=[o];function r(_,i){return n(),s("div",null,a)}const l=e(c,[["render",r]]);export{l as default};
