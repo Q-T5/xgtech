@@ -28,9 +28,19 @@
         </div>
         <div 
             class="h-[93%] max-h-[95%] overflow-scroll grid grid-cols-6 px-2 justify-items-center">
-            <game-display-comp 
-                v-for="(game, index) in data" :key="index"
-                :singleGameData="game" />
+            <div 
+                class="w-fit h-fit relative"
+                v-for="(game, index) in data" :key="index">
+                <game-display-comp :singleGameData="game" />
+                <div class="absolute top-[1.7rem] left-2 z-10">
+                    <v-btn 
+                        icon 
+                        color="purple"
+                        @click="addToCart(index)">
+                        <v-icon>mdi-cart-arrow-down</v-icon>
+                    </v-btn>
+                </div>
+            </div>
             <div class="flex items-center justify-center h-[17.5rem]">
                 <v-btn
                     rounded="pill"
