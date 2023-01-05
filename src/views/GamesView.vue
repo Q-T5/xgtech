@@ -29,7 +29,7 @@
         <div 
             class="h-[93%] max-h-[95%] overflow-scroll grid grid-cols-6 px-2 justify-items-center">
             <game-display-comp 
-                v-for="(game, index) in data" :key="index" :value="index"
+                v-for="(game, index) in data" :key="index"
                 :singleGameData="game" />
             <div class="flex items-center justify-center h-[17.5rem]">
                 <v-btn
