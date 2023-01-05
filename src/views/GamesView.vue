@@ -29,7 +29,6 @@
         <div 
             class="h-[93%] max-h-[95%] overflow-scroll grid grid-cols-6 px-2 justify-items-center">
             <game-display-comp 
-                @showExpandedView="showExpandedView = true" 
                 v-for="(game, index) in data" :key="index" :value="index"
                 :singleGameData="game" />
             <div class="flex items-center justify-center h-[17.5rem]">
@@ -41,27 +40,19 @@
             </div>
         </div>
     </div>
-    <teleport to="#games-expanded">
-        <game-expanded-comp 
-            v-if="showExpandedView"
-            @closeExpandedView="showExpandedView = false" />
-    </teleport>
 </template>
 
 <script lang="js">
 import { ref, computed } from 'vue'
 import GameDisplayComp from '../components/GameDisplayComp.vue'
-import GameExpandedComp from '../components/GameExpandedComp.vue'
 import useGameData from '/src/composables/GameData.js'
 
 export default {
     name: "GamesView",
     components: {
-        GameDisplayComp, GameExpandedComp
+        GameDisplayComp
     },
     setup: function() {
-        // reactive data
-        const showExpandedView = ref(false);
         const searchTerm = ref("");
         // store composable as object
         const gameData = useGameData();
@@ -75,7 +66,7 @@ export default {
         });
 
         return {
-            showExpandedView, gameData, data, searchTerm
+            gameData, data, searchTerm
         }
     }
 }
