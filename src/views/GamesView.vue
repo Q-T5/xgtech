@@ -6,7 +6,7 @@
                 <input 
                     type="text" 
                     class="game-search-box"
-                    placeholder="e.g Search The Witcher"
+                    placeholder="e.g the witcher"
                     maxlength="35"
                     v-model="searchTerm" />
                 <div class="absolute right-0.5 top-1 w-fit h-fit">
@@ -32,7 +32,7 @@
                 @showExpandedView="showExpandedView = true" 
                 v-for="(game, index) in data" :key="index" :value="index"
                 :singleGameData="game" />
-            <div class="flex items-center justify-center">
+            <div class="flex items-center justify-center h-[17.5rem]">
                 <v-btn
                     rounded="pill"
                     color="purple"
