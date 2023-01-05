@@ -1,7 +1,7 @@
 <template>
     <div class="fixed top-0 left-0 z-20 backdrop-blur-2xl w-full h-screen flex flex-col p-2">
         <div class="flex justify-between p-2 h-[8%]">
-            <h1 class="font-ubuntu text-3xl">The Witcher</h1>
+            <h1 class="font-ubuntu text-3xl">{{ expandedGameData.title }}</h1>
             <v-btn 
                 rounded="pill"
                 color="purple"
@@ -60,6 +60,12 @@ import { ref } from 'vue'
 
 export default {
     name: "GameExpandedComp",
+    props: {
+        expandedGameData: {
+            type: Object,
+            default: {}
+        }
+    },  
     setup: function(props, context) {
         // reactive data
         const comment = ref("");
