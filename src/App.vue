@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen">
+  <div class="w-screen h-screen relative">
     <nav class="h-[8%] py-2 px-4 flex justify-between items-center shadow-sm">
       <div class="inline-flex space-x-1 items-center">
         <img src="/src/assets/xgamer-logo.svg" alt="xgamer-logo" class="w-8" />
@@ -16,12 +16,35 @@
       </v-btn>
       </div>
     </nav>
-    <router-view></router-view>
+    <router-view v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component" />
+      </keep-alive>
+    </router-view>
+    <div class="absolute bottom-2 right-5">
+      <div class="relative">
+        <v-btn 
+          icon 
+          color="purple" 
+          @click="displayCart"
+          variant="flat">
+          <v-icon>mdi-cart</v-icon>
+        </v-btn>
+      </div>
+      <div class="absolute -top-3 -left-2">
+        <v-badge
+          color="gray"
+          content="6"
+          class="font-nunito"
+          inline></v-badge>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="js">
 import { ref } from 'vue'
+import router from './utils/router'
 
 export default {
   name: "App",
@@ -35,8 +58,13 @@ export default {
       { name: "ContactUsView", text: "Contact Us" },
     ]);
 
+    // functions
+    function displayCart() {
+      router.push({ name: "CartView" });
+    }
+
     return {
-      mainRoutes
+      mainRoutes, displayCart
     }
   }
 }
