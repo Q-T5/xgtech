@@ -20,11 +20,11 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     class="border-2 rounded-md bg-slate-500 shadow-md shadow-slate-500/50"></iframe>
                 <div class="font-nunito text-xl flex flex-col space-y-1 w-[85%] flex-wrap">
-                    <h1>Price(Ksh): 7800</h1>
-                    <h1>Release Date: 2021-22-10</h1>
-                    <h1>Game Size: 20GiB</h1>
-                    <h1>Genre: Adventure, First-Person, Quest</h1>
-                    <h1>Minimum Requirements: GeForce GTS 450 or Intel HD 4000 or better</h1>
+                    <h1>Price(Ksh): {{ expandedGameData.price }}</h1>
+                    <h1>Release Date: {{ expandedGameData.releaseDate }}</h1>
+                    <h1>Game Size: {{ expandedGameData.gameSize }}</h1>
+                    <h1>Genre: {{ expandedGameData.genre }}</h1>
+                    <h1>Minimum Requirements: {{ expandedGameData.minimumRequirements }}</h1>
                 </div>
             </div>
             <v-divider vertical></v-divider>
