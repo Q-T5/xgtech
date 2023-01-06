@@ -10,6 +10,10 @@ export const useCartStore = defineStore('cart', () => {
         return shoppingCart.value.length;
     });
 
+    const cartItems = computed(() => {
+        return shoppingCart.value;
+    });
+
     // function becomes the actions
     function addItemToShoppingCart(pickedItem) {
         shoppingCart.value.push(pickedItem);
@@ -17,6 +21,6 @@ export const useCartStore = defineStore('cart', () => {
     }
 
     return {
-        shoppingCart, addItemToShoppingCart, cartCount
+        shoppingCart, addItemToShoppingCart, cartCount, cartItems
     }
 });
