@@ -72,9 +72,16 @@ export default {
 
         // functions
         function addToCart(index) {
+            const gameToAdd = gameData.gameData.value[index];
+            const filteredGameInfo = {
+                title: gameToAdd.title,
+                price: gameToAdd.price,
+                posterLink: gameToAdd.posterLink,
+                gameSize: gameToAdd.gameSize
+            }
             // for the store, it returns an object wrapped with 'reactive'
             // so there is no need of saying .value after the store name
-            const response = cartStore.addItemToShoppingCart(gameData.gameData.value[index]);
+            const response = cartStore.addItemToShoppingCart(filteredGameInfo);
             if(response === true) {
                 addedToCart();
             }
