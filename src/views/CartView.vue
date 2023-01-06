@@ -11,7 +11,7 @@
         </div>
         <div class="w-2/4 flex flex-col items-center p-2">
             <h1 class="font-ubuntu text-4xl underline">Items in Your Cart</h1>
-            <div class="p-2 space-y-2 w-full flex flex-col items-center overflow-y-scroll">
+            <div class="p-2 space-y-2 w-full flex flex-col items-center h-full overflow-y-scroll">
                 <div 
                     class="rounded-sm shadow-sm shadow-slate-100/50 w-[75%] border-[1px] p-2 flex space-x-2"
                     v-for="(cartItem, index) in cartStore.cartItems" :key="index">
