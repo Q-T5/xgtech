@@ -9,27 +9,27 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: "/",
+            path: "/xgtech/",
             component: HomeView,
             name: "HomeView"
         },
         {
-            path: "/games",
+            path: "/xgtech/games",
             component: GamesView,
             name: "GamesView"
         },
         {
-            path: "/products",
+            path: "/xgtech/products",
             component: ProductsView,
             name: "ProductsView",
             children: [
                 {
-                    path: "/products/software",
+                    path: "/xgtech/products/software",
                     component: () => import("/src/views/subviews/SoftwareView.vue"),
                     name: "SofwareView"
                 },
                 {
-                    path: "/products/hardware",
+                    path: "/xgtech/products/hardware",
                     component: () => import("/src/views/subviews/HardwareView.vue"),
                     name: "HardwareView"
                 }
@@ -38,29 +38,29 @@ const router = createRouter({
             ]
         },
         {
-            path: "/services",
+            path: "/xgtech/services",
             component: ServicesView,
             name: "ServicesView",
             children: [
                 {
-                    path: "/services/repairs",
+                    path: "/xgtech/services/repairs",
                     component: () => import("/src/views/subviews/RepairsView.vue"),
                     name: "RepairsView"
                 },
                 {
-                    path: "/services/trade-ins",
+                    path: "/xgtech/services/trade-ins",
                     component: () => import("/src/views/subviews/TradeInsView.vue"),
                     name: "TradeInsView"
                 },
             ]
         },
         {
-            path: "/cart",
+            path: "/xgtech/cart",
             component: () => import("/src/views/CartView.vue"),
             name: "CartView"
         },
         {
-            path: "/contact",
+            path: "/xgtech/contact",
             component: ContactUsView,
             name: "ContactUsView"
         }
