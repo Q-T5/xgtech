@@ -4,7 +4,7 @@ export default function useGame() {
         {
             title: "The Witcher",
             price: "7800",
-            posterLink: "/src/assets/media/witcher.jpg",
+            posterLink: "https://files.fm/thumb_show.php?i=g7mg6xmeb",
             releaseDate: "2021-22-10",
             gameSize: "20GiB",
             genre: "Adventure, First-Person, Quest",
@@ -27,7 +27,7 @@ export default function useGame() {
         {
             title: "NFS Most Wanted",
             price: "1200",
-            posterLink: "/src/assets/media/nfs-mw.jpg",
+            posterLink: "https://files.fm/thumb_show.php?i=zx45qpveb",
             releaseDate: "2006-22-10",
             gameSize: "12GiB",
             genre: "Simulator, Racing",
@@ -42,7 +42,7 @@ export default function useGame() {
         {
             title: "Forza Horizon 5",
             price: "3400",
-            posterLink: "/src/assets/media/forza-5.jpg",
+            posterLink: "https://files.fm/thumb_show.php?i=3vjhz44sx",
             releaseDate: "2020-12-06",
             gameSize: "21GiB",
             genre: "Simulator, Racing, Events",
@@ -57,7 +57,7 @@ export default function useGame() {
         {
             title: "FIFA 21",
             price: "3400",
-            posterLink: "/src/assets/media/fifa-21.jpg",
+            posterLink: "https://files.fm/thumb_show.php?i=rf6ekp7he",
             releaseDate: "2021-05-06",
             gameSize: "35GiB",
             genre: "Football, Competition",
@@ -72,7 +72,7 @@ export default function useGame() {
         {
             title: "PES 2011",
             price: "3400",
-            posterLink: "/src/assets/media/pes-11.jpg",
+            posterLink: "https://files.fm/thumb_show.php?i=29mcxnuwv",
             releaseDate: "2011-05-06",
             gameSize: "8GiB",
             genre: "Football, Competition",
