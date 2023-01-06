@@ -21,7 +21,9 @@
         <component :is="Component" @addedToCart="cartItems++" />
       </keep-alive>
     </router-view>
-    <div class="absolute bottom-2 right-5">
+    <div 
+      class="absolute bottom-2 right-5"
+      v-show="$route.name !== 'CartView'">
       <div class="relative">
         <v-btn 
           icon 
