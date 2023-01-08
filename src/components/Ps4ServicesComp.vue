@@ -15,7 +15,7 @@
                     <td> {{ service.service }}</td>
                     <td class="text-center"> {{ service.cost }}</td>
                 </tr>
-        </table>
+            </table>
         </div>
     </div>
 </template>
