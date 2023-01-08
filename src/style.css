@@ -17,5 +17,5 @@
 }
 
 .table-detail-row {
-    @apply text-xl border-b-purple-500 border-solid border-b-[1px] hover:bg-slate-300/10;
+    @apply text-lg border-b-purple-500 border-solid border-b-[1px] hover:bg-slate-300/10;
 }
