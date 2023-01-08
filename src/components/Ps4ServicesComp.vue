@@ -5,12 +5,12 @@
         </div>
         <div class="w-[90%]">
             <table class="w-full">
-                <tr class="bg-purple-700 font-nunito text-lg">
+                <tr class="bg-primary font-nunito text-lg">
                     <th class="table-headers">Number</th>
                     <th class="table-headers">Service Description</th>
                     <th class="table-headers">Minimum Cost(Ksh)</th>
                 </tr>
-                <tr class="table-detail-row" v-for="(service, index) in services" :key="index">
+                <tr class="table-detail-row border-primary" v-for="(service, index) in services" :key="index">
                     <td class="text-center"> {{ service.number }} </td>
                     <td> {{ service.service }}</td>
                     <td class="text-center"> {{ service.cost }}</td>

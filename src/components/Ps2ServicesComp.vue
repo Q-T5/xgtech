@@ -5,7 +5,7 @@
         </div>
         <div class="w-[90%]">
             <table class="w-full">
-                <tr class="bg-purple-700 font-nunito text-lg">
+                <tr class="bg-primary font-nunito text-lg">
                     <th class="table-headers">Number</th>
                     <th class="table-headers">Service Description</th>
                     <th class="table-headers">Minimum Cost(Ksh)</th>
