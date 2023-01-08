@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o,a as c}from"./index-932f15d7.js";const n={name:"SoftwareView",setup:function(){}},s=c("h1",null,"software view",-1),a=[s];function r(_,f){return t(),o("div",null,a)}const l=e(n,[["render",r]]);export{l as default};
