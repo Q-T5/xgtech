@@ -14,6 +14,13 @@
             </router-link>today or click on any of the links below to shop for hardware,
             software and games, or to contact us.
         </p>
+        <div 
+            class="w-[50%] font-nunito text-lg">
+            <v-alert 
+                type="info"
+                color="purple"
+                border="start">This site is fully open-source but the code is currently private</v-alert>
+        </div>
         <div class="w-[50%] max-w-[50%] space-x-2">
             <v-btn 
                 v-for="(button, index) in homeButtons" :key="index" :value="index"
