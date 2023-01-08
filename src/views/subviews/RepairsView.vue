@@ -8,8 +8,7 @@
             <v-btn 
                 v-for="(comp, index) in components" :key="index"
                 :value="comp.component"
-                variant="flat"
-                :color="currentComponent === comp.component ? 'primary' :  ''">
+                variant="outlined">
                 {{ comp.text }}
             </v-btn>
         </v-btn-toggle>
