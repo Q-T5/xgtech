@@ -60,7 +60,7 @@ export default {
       { name: "HomeView", text: "Home" },
       { name: "GamesView", text: "Games" },
       { name: "ProductsView", text: "Products" },
-      { name: "ServicesView", text: "Services" },
+      { name: "RepairsView", text: "Services" },
       { name: "ContactUsView", text: "Contact Us" },
     ]);
     const cartItems = ref(0);
