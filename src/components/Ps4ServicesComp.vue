@@ -10,7 +10,7 @@
                     <th class="table-headers">Service Description</th>
                     <th class="table-headers">Minimum Cost(Ksh)</th>
                 </tr>
-                <tr class="table-detail-row border-primary" v-for="(service, index) in services" :key="index">
+                <tr class="h-8 text-lg" v-for="(service, index) in services" :key="index">
                     <td class="text-center"> {{ service.number }} </td>
                     <td> {{ service.service }}</td>
                     <td class="text-center"> {{ service.cost }}</td>
