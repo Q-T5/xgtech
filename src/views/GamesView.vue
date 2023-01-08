@@ -11,7 +11,7 @@
                     v-model="searchTerm" />
                 <div class="absolute right-0.5 top-1 w-fit h-fit">
                     <v-btn 
-                        color="purple"
+                        color="primary"
                         variant="flat"
                         rounded="pill"
                         size="small">search</v-btn>
@@ -20,7 +20,7 @@
             <div class="pr-4">
                 <v-btn 
                     icon 
-                    color="purple"
+                    color="primary"
                     size="small">
                     <v-icon>mdi-filter-menu</v-icon>
                 </v-btn>
@@ -35,7 +35,7 @@
                 <div class="absolute top-[1.7rem] left-2 z-10">
                     <v-btn 
                         icon 
-                        color="purple"
+                        color="primary"
                         @click="addToCart(index)">
                         <v-icon>mdi-cart-arrow-down</v-icon>
                     </v-btn>
@@ -44,7 +44,7 @@
             <div class="flex items-center justify-center h-[17.5rem]">
                 <v-btn
                     rounded="pill"
-                    color="purple"
+                    color="primary"
                     variant="flat"
                     append-icon="mdi-monitor-arrow-down-variant">load more</v-btn>
             </div>

@@ -9,7 +9,7 @@
         <v-btn 
           v-for="(route, index) in mainRoutes" :key="index" :value="index"
           rounded="pill"
-          :color="$route.name === route.name ? 'purple' : ''"
+          :color="$route.name === route.name ? 'primary' : ''"
           @click="$router.push({ name: route.name })"
           :variant="$route.name === route.name ? 'flat' : 'text'">
           {{ route.text }}
@@ -27,7 +27,7 @@
       <div class="relative">
         <v-btn 
           icon 
-          color="purple" 
+          color="primary" 
           @click="displayCart"
           variant="flat">
           <v-icon>mdi-cart</v-icon>

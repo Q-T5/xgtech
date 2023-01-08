@@ -18,14 +18,14 @@
             class="w-[50%] font-nunito text-lg">
             <v-alert 
                 type="info"
-                color="purple"
+                color="primary"
                 border="start">This site is fully open-source but the code is currently private</v-alert>
         </div>
         <div class="w-[50%] max-w-[50%] space-x-2">
             <v-btn 
                 v-for="(button, index) in homeButtons" :key="index" :value="index"
                 rounded="pill"
-                color="purple"
+                color="primary"
                 @click="$router.push({ name: button.routeName })"
                 :append-icon="button.icon"
                 variant="flat">

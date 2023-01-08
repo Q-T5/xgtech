@@ -4,7 +4,7 @@
             <h1 class="font-ubuntu text-3xl">{{ expandedGameData.title }}</h1>
             <v-btn 
                 rounded="pill"
-                color="purple"
+                color="primary"
                 append-icon="mdi-close"
                 variant="flat"
                 @click="closeExpandedView">Close</v-btn>
@@ -53,7 +53,7 @@
                         icon="mdi-comment-plus"
                         rounded="pill"
                         variant="flat"
-                        color="purple"
+                        color="primary"
                         size="small"></v-btn>
                 </div>
             </div>

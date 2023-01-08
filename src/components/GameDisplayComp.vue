@@ -11,7 +11,7 @@
             <div 
                 class="absolute rounded-md top-0 w-full h-full bg-slate-50/10 flex justify-center items-center"
                 :hidden="displayOverlay">
-                <v-btn icon color="purple" @click="showExpandedView = true">
+                <v-btn icon color="primary" @click="showExpandedView = true">
                     <v-icon>mdi-arrow-expand</v-icon>
                 </v-btn>
             </div>
