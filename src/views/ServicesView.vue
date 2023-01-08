@@ -3,9 +3,9 @@
         <div class="h-[5%] flex items-center p-2 justify-around space-x-2">
             <button
                 v-for="(category, index) in mainCategories" :key="index" :value="index"
-                class="text-lg w-full inline-flex items-center justify-center border-b-[1px] border-solid font-nunito"
+                class="text-lg w-full inline-flex items-center justify-center border-b-[1px] font-nunito"
                 @click="$router.push({ name: category.name })"
-                :class="$route.name === category.name ? 'active-service' : ''">
+                :class="$route.name === category.name ? 'bg-primary rounded-md' : ''">
                 {{ category.heading }} <v-icon>{{ category.icon }}</v-icon>
             </button>
         </div>
